@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     paddingHorizontal: 18,
     alignItems: "center",
-    backgroundColor:"cyan",
+    backgroundColor:Colors.backgroundColor,
     opacity:0.7,
     borderRadius :3
   },

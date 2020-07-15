@@ -52,7 +52,7 @@ export default (props) => {
       AsyncStorage.setItem(
         "userData",
         JSON.stringify({
-          username:usernameInput,
+          username :"wwwww",
           login:true
         })
       )

@@ -1,6 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../HomeScreen";
+import HomeStack from "../../navigator/HomeStack"
 import ProfileScreen from "../ProfileScreen";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { Icon } from "native-base";
@@ -19,8 +20,8 @@ export default () => {
     }}
     >
      <Tab.Screen 
-     name="Home" 
-     component={HomeScreen} 
+     name="HomeStack" 
+     component={HomeStack} 
      options={{
          tabBarIcon:({color,size})=>(
          <Icon type="Entypo" name="home" style={{color}} />

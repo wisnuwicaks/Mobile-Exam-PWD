@@ -6,6 +6,10 @@ import { Provider, useDispatch, useSelector } from "react-redux";
 import AsyncStorage from "@react-native-community/async-storage";
 import MainTab from "../screen/Tab/MainTab";
 import LoginScreen from "../screen/LoginScreen";
+import HomeStack from "../navigator/HomeStack";
+import HomeScreen from "../screen/HomeScreen";
+
+
 
 
 
@@ -18,9 +22,10 @@ export default () => {
   // Pengganti compDidMount, compDidUpdate, compWillUnmount
   //saasd asdasd
   useEffect((storageItem) => {
+    console.log(storageItem)
     AsyncStorage.getItem("userData")   
       .then((storageItem) => {
-        console.log(storageItem);
+        console.log(storageItem);//asasdsasdaasdsadsd
         if (!storageItem) throw "Item is empty";
         dispatch({
           type: "USER_LOGIN",
@@ -31,7 +36,7 @@ export default () => {
         console.log(err);
       });
   }, []);
-
+//asdsad
   return (
     <NavigationContainer>
       <StatusBar style="light" />

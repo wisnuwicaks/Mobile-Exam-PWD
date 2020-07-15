@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
 export default ({ navigation, data }) => {
   return (
     <View
+      onPress={() => navigation.navigate("Detail", { restaurantDetail: data })}
       style={{
         backgroundColor: Colors.backgroundColor,
         width: width - 30,
@@ -44,16 +45,22 @@ export default ({ navigation, data }) => {
         marginVertical: 10,
       }}
     >
-      <ImageScale
-        source={{
-          uri: data.image,
-        }}
-        style={{
-          borderTopLeftRadius: 6,
-          borderTopRightRadius: 6,
-        }}
-        width={width - 30}
-      />
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("DetailScreen", { restaurantDetail: data })
+        }
+      >
+        <ImageScale
+          source={{
+            uri: data.image,
+          }}
+          style={{
+            borderTopLeftRadius: 6,
+            borderTopRightRadius: 6,
+          }}
+          width={width - 30}
+        />
+      </TouchableOpacity>
       <View style={{ paddingHorizontal: 13 }}>
         <View
           style={{
