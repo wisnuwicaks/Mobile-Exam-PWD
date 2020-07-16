@@ -59,13 +59,17 @@ export default ({ navigation }) => {
       <View
         style={{
           flexDirection: "row",
-          alignItems: "center",
+          // alignItems: "center",
+          // alignContent:"center",
+          // justifyContent :"center",
           backgroundColor: "orange",
           marginTop: 20,
           height: 50,
+          // borderColor:"red",
+          // borderWidth:2
         }}
       >
-        <View style={{ justifyContent: "flex-end" }}>
+        <View style={{ alignSelf: "center" }}>
           <Icon
             type="AntDesign"
             name="user"
@@ -74,7 +78,7 @@ export default ({ navigation }) => {
             }}
           />
         </View>
-        <View style={{ justifyContent: "flex-start" }}>
+        <View style={{ justifyContent: "flex-end",alignSelf:"center",marginStart:300 }}>
           <Text style={{ color: "white" }}>
             {"Hallo " + userSelector.username}
           </Text>
@@ -85,8 +89,8 @@ export default ({ navigation }) => {
         // ListHeaderComponent={() => {
         //   return <H1 bold>RESTAURANT LIST</H1>;
         // }}
-        ListHeaderComponentStyle={{ marginHorizontal: 15 }}
-        contentContainerStyle={{ marginTop: 46 }}
+        // ListHeaderComponentStyle={{ marginHorizontal: 20 }}
+        contentContainerStyle={{ marginTop: 20}}
         data={restaurantList} //restaurantList berisi array of object
         // numColumns={2}
         renderItem={renderCard} //renderCard adalah function

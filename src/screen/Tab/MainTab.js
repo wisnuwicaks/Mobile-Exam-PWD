@@ -35,7 +35,7 @@ export default () => {
      options={{
         tabBarIcon:({color,size})=>(
           
-        <Icon type="AntDesign" name="restaurant" style={{color}} />
+        <Icon type="Ionicons" name="restaurant" style={{color}} />
         )
         }} 
      />

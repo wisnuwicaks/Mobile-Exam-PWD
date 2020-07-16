@@ -17,13 +17,10 @@ import { Icon } from "native-base";
 import PlaceholderProfPic from "../../../assets/images/signup_bg.png";
 import { render } from "react-dom";
 
-const { width } = Dimensions.get("screen");
+const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
-  likeBtn: {
-    fontSize: 22,
-    color: "white",
-  },
+  
 });
 ////
 export default ({ navigation, data }) => {
@@ -48,8 +45,8 @@ export default ({ navigation, data }) => {
       onPress={() => navigation.navigate("Detail", { restaurantDetail: data })}
       style={{
         backgroundColor: Colors.backgroundColor,
-        width: width/2,
-        marginHorizontal:5,
+        width: (width)/2,
+        marginHorizontal:10,
         borderRadius: 2,
         shadowColor: "#000",
         shadowOffset: {
@@ -75,7 +72,7 @@ export default ({ navigation, data }) => {
             borderTopLeftRadius: 6,
             borderTopRightRadius: 6,
           }}
-          width={width/2}
+          // width={width/2}
         />
       </TouchableOpacity>
       <View style={{ paddingHorizontal: 2 }}>
@@ -83,29 +80,30 @@ export default ({ navigation, data }) => {
           style={{
             flexDirection: "column",
             alignItems: "flex-start",
-            marginTop: 10,
-            marginBottom: 10,
-            padding:10
+            // marginTop: 10,
+            // marginBottom: 10,
+            padding:5
           }}
         >
-          <View style={{ flex: 1, flexDirection: "row",borderColor:"white",borderWidth:2,
+          <View style={{ flex: 1, flexDirection: "row",
           marginLeft: 2, marginBottom:10
           }}>
-            <TextUI style={{ height:30,width:100, fontSize:20 }} bold>
+            <TextUI style={{ height:30,width:50, fontSize:15 }} bold>
               <Icon
                 type="AntDesign"
                 name="star"
                 style={{
-                  color: "yellow",
-                  paddingHorizontal :30
+                  color: "orange",
+                  marginHorizontal :30
                 }}
                 
               />
+              {"   "}
               {data.rating}
             </TextUI>
           </View>
-          <View style={{ marginTop:5, padding:5, borderColor:"white"}}>
-            <TextUI style={{flexDirection:"column", fontSize:15}} bold>
+          <View style={{paddingVertical:5,marginHorizontal:10}}>
+            <TextUI style={{height:40,flexDirection:"column", fontSize:18}} bold>
               {data.restaurantName}
             </TextUI>
           </View>

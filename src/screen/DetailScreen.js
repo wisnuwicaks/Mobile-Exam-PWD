@@ -58,21 +58,21 @@ export default (props) => {
         <View style={{ ...styles.detailContainer }}>
           
           <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.rating}
+            Rating {"     "}:{restaurantDetail.rating}
           </TextUI>
           <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.address}
-          </TextUI>
-
-          <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.cuisine}
-          </TextUI>
-          <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.openTime + "to" + restaurantDetail.closeTime}
+            Addrress :{restaurantDetail.address}
           </TextUI>
 
           <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.costForTwo}
+            Cuisine {"   "}:{restaurantDetail.cuisine}
+          </TextUI>
+          <TextUI size="sm" style={{ height: null }}>
+            Open {"       "}:{restaurantDetail.openTime + "to" + restaurantDetail.closeTime}
+          </TextUI>
+
+          <TextUI size="sm" style={{ height: null }}>
+          Cost for 2{""}:{restaurantDetail.costForTwo}
           </TextUI>
         </View>
       </ScrollView>

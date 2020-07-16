@@ -28,7 +28,7 @@ export default ({ children, style, accent, bold, size }) => {
     <Text
       style={{
         ...styles.text,
-        color: accent ? "#F54B64" : "#FFFFFF",
+        color: accent ? "#F54B64" : "#black",
         // fontFamily,
         fontSize: 15,
         textAlignVertical: "center",

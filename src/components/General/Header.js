@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     marginTop:50,
     alignItems: "center",
-    backgroundColor:Colors.backgroundColor,
+    backgroundColor:"orange",
     opacity:0.7,
     borderRadius :3
   },
@@ -36,7 +36,8 @@ export default (props) => {
           ...StyleSheet.absoluteFillObject,
           // top: null,
           // bottom: null,
-          left: 16,
+          left: 15,
+          top:13,
           // right: null,
           zIndex: 1,
         }}
