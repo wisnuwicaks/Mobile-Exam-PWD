@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     height: 50,
     flexDirection: "column",
     paddingHorizontal: 18,
+    marginTop:50,
     alignItems: "center",
     backgroundColor:Colors.backgroundColor,
     opacity:0.7,
@@ -48,7 +49,7 @@ export default (props) => {
           }}
         />
       </TouchableOpacity>
-      <TextUI style={{ flex: 1, textAlign: "center" }} bold>
+      <TextUI style={{ flex: 1, textAlign: "center", fontSize:20 }} bold>
         {props.title}
       </TextUI>
     </View>

@@ -1,7 +1,7 @@
 const init_state = {
 
-    username: "wwwww",
-    login :false
+    username: "",
+    // login :false
   
   };
   

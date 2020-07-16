@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   btnContainer: {
-    borderRadius: 22,
+    borderRadius: 5,
     width: "100%",
   },
   primary: {
@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
   },
   secondary: {
     backgroundColor: "white",
+  },
+  third: {
+    backgroundColor: "blue",
   },
   lg: {
     paddingVertical: 12,

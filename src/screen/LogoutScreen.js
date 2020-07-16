@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from "react"
-import {StyleSheet, Text, View} from "react-native"
+import {StyleSheet, Text, View,ImageBackground} from "react-native"
 import {useSelector,useDispatch} from "react-redux"
+import LoginBG from "../../assets/images/login_bg.jpg";
+
 import TextUI from "../components/Text/TextUI"
 import Axios from "axios"
 import Colors from "../constants/Colors"
@@ -11,8 +13,10 @@ const styles = StyleSheet.create({
     container:{
     alignItems:"center",
     justifyContent:"center",
+    paddingTop:15,
     flex:1,
-    backgroundColor:Colors.backgroundColor,
+    backgroundColor:"white",
+ 
     },
 })
 
@@ -33,11 +37,16 @@ export default ({navigation})=>{
         .catch()
     }
     return(
+        // <ImageBackground source={LoginBG}>
     <View style={{...styles.container}}>
-      <TextUI accent bold size="lg"> {userSelector.username}</TextUI>  
-        <Button onPress={logoutHandler} type="secondary" size="md">
+        <View style={{width:100}}>
+        <Button onPress={logoutHandler} type="third" size="md">
             Logout
         </Button>
+        </View>
+        
+        
     </View>
+    // </ImageBackground>
     )
 }

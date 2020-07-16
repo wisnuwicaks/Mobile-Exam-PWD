@@ -14,7 +14,7 @@ import HomeScreen from "../screen/HomeScreen";
 
 
 const Stack = createStackNavigator();
-
+///
 export default () => {
   const dispatch = useDispatch();
   const userSelector = useSelector((state) => state.user);
@@ -41,7 +41,7 @@ export default () => {
     <NavigationContainer>
       <StatusBar style="light" />
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {userSelector.login ? (
+        {userSelector.username ? (
           <Stack.Screen
             options={{ animationEnabled: false }}
             name="MainTab"

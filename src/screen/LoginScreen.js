@@ -1,4 +1,4 @@
-import React, { useState, Alert } from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -9,13 +9,16 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
   KeyboardAvoidingView,
+  Alert
 } from "react-native";
 import Button from "../components/Button/Button";
-import LoginBG from "../../assets/images/login_bg.png";
+import LoginBG from "../../assets/images/login_bg.jpg";
 import DarkOverlay from "../components/General/DarkOverlay";
 import TextUI from "../components/Text/TextUI";
 import { useDispatch, useSelector } from "react-redux";
 import AsyncStorage from "@react-native-community/async-storage";
+import { Icon } from "native-base";
+
 
 const styles = StyleSheet.create({
   container: {
@@ -48,28 +51,25 @@ export default (props) => {
   const userSelector = useSelector((state) => state.user);
 
   const loginBtnHandler = () => { 
-    if(userSelector.username==usernameInput){
+    // if(userSelector.username==usernameInput){
+      //sdasdasd
       AsyncStorage.setItem(
         "userData",
         JSON.stringify({
-          username :"wwwww",
-          login:true
+          username :usernameInput,
+          
         })
       )
        return dispatch({
             type: "USER_LOGIN",
-            payload: {login:true},
+            payload: {username:usernameInput},
           });
      
-    }
+    // }
     return Alert.alert(
-        'Alert Title',
-        'My Alert Msg',
+        'Username Salah',
+        'Maaf username kamu salah',
         [
-          {
-            text: 'Ask me later',
-            onPress: () => console.log('Ask me later pressed')
-          },
           {
             text: 'Cancel',
             onPress: () => console.log('Cancel Pressed'),
@@ -91,41 +91,46 @@ export default (props) => {
           style={{ justifyContent: "center", flex: 1 }}
         >
           <View style={{ ...styles.contentContainer }}>
-            <TextUI style={{ ...styles.welcomeText }}>
-              Welcome Back {userSelector.username}
-            </TextUI>
-            <TextUI style={{ ...styles.loginText }}>
-              Login to your account
-            </TextUI>
             <View
               style={{
                 borderRadius: 22,
                 paddingVertical: 11,
                 paddingHorizontal: 20,
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 marginTop: 58,
+                flexDirection:"row"
               }}
             >
               <View
                 style={{
                   backgroundColor: "white",
-                  opacity: 0.2,
-                  borderRadius: 22,
+                  opacity: 0.7,
+                  borderRadius: 5,
+                  paddingHorizontal:20,
                   ...StyleSheet.absoluteFillObject,
                 }}
               />
+              <Icon
+                type="AntDesign"
+                name="user"
+                style={{
+                  color: "black",
+                }}
+                
+              />
               <TextInput
                 autoCapitalize="none"
-                placeholderTextColor="lightgrey"
+                placeholderTextColor="black"
                 style={{
                   // fontFamily: "AvenirNextLTPro-Regular",
                   fontSize: 17,
-                  color: "white",
+                  color: "black",
                   lineHeight: 19,
                 }}
                 placeholder="Username"
                 value={usernameInput}
                 onChangeText={(text) => setUsernameInput(text)}
+                
               />
             </View>
             

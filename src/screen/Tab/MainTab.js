@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../HomeScreen";
 import HomeStack from "../../navigator/HomeStack"
-import ProfileScreen from "../ProfileScreen";
+import LogoutScreen from "../LogoutScreen";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { Icon } from "native-base";
 
@@ -30,11 +30,12 @@ export default () => {
         />
      
      <Tab.Screen 
-     name="Profile" 
-     component={ProfileScreen}
+     name="Logout" 
+     component={LogoutScreen}
      options={{
         tabBarIcon:({color,size})=>(
-        <Icon type="FontAwesome5" name="user" style={{color}} />
+          
+        <Icon type="AntDesign" name="restaurant" style={{color}} />
         )
         }} 
      />

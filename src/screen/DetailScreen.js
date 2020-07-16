@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     alignItems: "center",
   },
-  commentContainer: {
+  detailContainer: {
     paddingHorizontal: 30,
     marginTop: 12,
   },
@@ -43,14 +43,11 @@ export default (props) => {
       style={{
         flex: 1,
         backgroundColor: Colors.backgroundColor,
-        
       }}
     >
       <SafeAreaView />
-      
-      <Header {...props} title={restaurantDetail.restaurantName} style={{
-        
-      }} />
+
+      <Header {...props} title={restaurantDetail.restaurantName} style={{}} />
       <ScrollView style={{ flex: 1 }}>
         <Image
           style={{ maxHeight: 540 }}
@@ -58,31 +55,27 @@ export default (props) => {
           source={{ uri: restaurantDetail.image }}
         />
 
-        <View style={{ ...styles.commentContainer }}>
+        <View style={{ ...styles.detailContainer }}>
+          
+          <TextUI size="sm" style={{ height: null }}>
+            {restaurantDetail.rating}
+          </TextUI>
+          <TextUI size="sm" style={{ height: null }}>
+            {restaurantDetail.address}
+          </TextUI>
+
           <TextUI size="sm" style={{ height: null }}>
             {restaurantDetail.cuisine}
           </TextUI>
           <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.openTime}
+            {restaurantDetail.openTime + "to" + restaurantDetail.closeTime}
           </TextUI>
-          <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.closeTime}
-          </TextUI>
+
           <TextUI size="sm" style={{ height: null }}>
             {restaurantDetail.costForTwo}
           </TextUI>
-          <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.currency}
-          </TextUI>
-          <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.createdAt}
-          </TextUI>
-          <TextUI size="sm" style={{ height: null }}>
-            {restaurantDetail.updatedAt}
-          </TextUI>
         </View>
       </ScrollView>
-      
     </View>
   );
 };

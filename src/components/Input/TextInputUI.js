@@ -3,16 +3,16 @@ import { View, TextInput, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 22,
+    borderRadius: 5,
     paddingVertical: 11,
     paddingHorizontal: 20,
     justifyContent: "center",
   },
   bg: {
     backgroundColor: "white",
-    opacity: 0.2,
+    opacity: 0.8,
     ...StyleSheet.absoluteFillObject,
-    borderRadius: 22,
+    borderRadius:5,
   },
   textInput: {
     // fontFamily: "AvenirNextLTPro-Regular",
