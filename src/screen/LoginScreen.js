@@ -159,7 +159,7 @@ export default (props) => {
               containerStyle={{ marginTop: 40 }}
               size="lg"
             >
-              LOGIN
+              ENTER
             </Button>
           </View>
         </KeyboardAvoidingView>

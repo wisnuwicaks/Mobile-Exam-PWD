@@ -21,8 +21,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 19,
     color: "white",
-    borderBottomColor:"black",
-    borderBottomWidth:5
+
   },
 });
 ////
