@@ -23,7 +23,7 @@ import { API_URL } from "../constants/API";
 import { Icon } from "native-base";
 import { Directions } from "react-native-gesture-handler";
 
-const { width } = Dimensions.get("screen");
+const { width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({});
 
@@ -89,10 +89,12 @@ export default ({ navigation }) => {
         // ListHeaderComponent={() => {
         //   return <H1 bold>RESTAURANT LIST</H1>;
         // }}
-        // ListHeaderComponentStyle={{ marginHorizontal: 20 }}
+        // style={{flex:1,flexDirection:"row", borderWidth:2, borderWidth:2}}
+        ListHeaderComponentStyle={{ marginHorizontal: 5 }}
+        horizontal={false}
         contentContainerStyle={{ marginTop: 20}}
         data={restaurantList} //restaurantList berisi array of object
-        // numColumns={2}
+        numColumns={2}
         renderItem={renderCard} //renderCard adalah function
         // renderItem adalah properties dari flatlist yang menerima function untuk merender
         // item dari array.
