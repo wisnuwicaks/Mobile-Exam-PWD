@@ -59,14 +59,10 @@ export default ({ navigation }) => {
       <View
         style={{
           flexDirection: "row",
-          // alignItems: "center",
-          // alignContent:"center",
-          // justifyContent :"center",
+
           backgroundColor: "orange",
           marginTop: 20,
           height: 50,
-          // borderColor:"red",
-          // borderWidth:2
         }}
       >
         <View style={{ alignSelf: "center" }}>
@@ -78,7 +74,13 @@ export default ({ navigation }) => {
             }}
           />
         </View>
-        <View style={{ justifyContent: "flex-end",alignSelf:"center",marginStart:300 }}>
+        <View
+          style={{
+            justifyContent: "flex-end",
+            alignSelf: "center",
+            marginStart: 300,
+          }}
+        >
           <Text style={{ color: "white" }}>
             {"Hallo " + userSelector.username}
           </Text>
@@ -86,13 +88,7 @@ export default ({ navigation }) => {
       </View>
 
       <FlatList
-        // ListHeaderComponent={() => {
-        //   return <H1 bold>RESTAURANT LIST</H1>;
-        // }}
-        // style={{flex:1,flexDirection:"row", borderWidth:2, borderWidth:2}}
-        ListHeaderComponentStyle={{ marginHorizontal: 5 }}
-        horizontal={false}
-        contentContainerStyle={{ marginTop: 20}}
+        contentContainerStyle={{ marginTop: 20 }}
         data={restaurantList} //restaurantList berisi array of object
         numColumns={2}
         renderItem={renderCard} //renderCard adalah function

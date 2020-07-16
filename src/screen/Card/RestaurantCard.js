@@ -29,7 +29,7 @@ export default ({ navigation, data }) => {
       style={{
         backgroundColor: Colors.backgroundColor,
         width: width / 2,
-        marginHorizontal: 10,
+        marginHorizontal: 2,
         borderRadius: 2,
         shadowColor: "#000",
         shadowOffset: {
@@ -57,7 +57,6 @@ export default ({ navigation, data }) => {
           }}
           width={width / 2}
         />
-      </TouchableOpacity>
       <View style={{ paddingHorizontal: 2 }}>
         <View
           style={{
@@ -91,7 +90,7 @@ export default ({ navigation, data }) => {
           </View>
           <View style={{ paddingVertical: 5, marginHorizontal: 10 }}>
             <TextUI
-              style={{ height: 40, flexDirection: "column", fontSize: 18 }}
+              style={{ height: 45, flexDirection: "column", fontSize: 18 }}
               bold
             >
               {data.restaurantName}
@@ -99,6 +98,8 @@ export default ({ navigation, data }) => {
           </View>
         </View>
       </View>
+      </TouchableOpacity>
+
     </View>
     // </View>
   );

@@ -9,7 +9,7 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
   KeyboardAvoidingView,
-  Alert
+  Alert,
 } from "react-native";
 import Button from "../components/Button/Button";
 import LoginBG from "../../assets/images/login_bg.jpg";
@@ -18,7 +18,6 @@ import TextUI from "../components/Text/TextUI";
 import { useDispatch, useSelector } from "react-redux";
 import AsyncStorage from "@react-native-community/async-storage";
 import { Icon } from "native-base";
-
 
 const styles = StyleSheet.create({
   container: {
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
   welcomeText: {
     // fontFamily: "AvenirNextLTPro-Heavy",
     fontSize: 34,
-    height:50,
+    height: 50,
   },
   loginText: {
     marginTop: 12,
@@ -45,41 +44,39 @@ const styles = StyleSheet.create({
 });
 
 export default (props) => {
-  const [usernameInput,setUsernameInput] = useState("");
+  const [usernameInput, setUsernameInput] = useState("");
 
   const dispatch = useDispatch();
   const userSelector = useSelector((state) => state.user);
 
-  const loginBtnHandler = () => { 
+  const loginBtnHandler = () => {
     // if(userSelector.username==usernameInput){
-      //sdasdasd
-      AsyncStorage.setItem(
-        "userData",
-        JSON.stringify({
-          username :usernameInput,
-          
-        })
-      )
-       return dispatch({
-            type: "USER_LOGIN",
-            payload: {username:usernameInput},
-          });
-     
+    //sdasdasd
+    AsyncStorage.setItem(
+      "userData",
+      JSON.stringify({
+        username: usernameInput,
+      })
+    );
+    return dispatch({
+      type: "USER_LOGIN",
+      payload: { username: usernameInput },
+    });
+
     // }
     return Alert.alert(
-        'Username Salah',
-        'Maaf username kamu salah',
-        [
-          {
-            text: 'Cancel',
-            onPress: () => console.log('Cancel Pressed'),
-            style: 'cancel'
-          },
-          { text: 'OK', onPress: () => console.log('OK Pressed') }
-        ],
-        { cancelable: false }
-      );
-
+      "Username Salah",
+      "Maaf username kamu salah",
+      [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel",
+        },
+        { text: "OK", onPress: () => console.log("OK Pressed") },
+      ],
+      { cancelable: false }
+    );
   };
 
   return (
@@ -90,6 +87,28 @@ export default (props) => {
           behavior="padding"
           style={{ justifyContent: "center", flex: 1 }}
         >
+          <View>
+            <Text
+              style={{
+                fontSize: 50,
+                textAlign: "center",
+                fontWeight: "bold",
+                color: "orange",
+              }}
+            >
+              Tomato App
+            </Text>
+            <Icon
+              type="Ionicons"
+              name="restaurant"
+              style={{
+                color: "orange",
+                fontSize: 100,
+                textAlign: "center",
+              }}
+            />
+          </View>
+
           <View style={{ ...styles.contentContainer }}>
             <View
               style={{
@@ -98,7 +117,7 @@ export default (props) => {
                 paddingHorizontal: 20,
                 justifyContent: "flex-start",
                 marginTop: 58,
-                flexDirection:"row"
+                flexDirection: "row",
               }}
             >
               <View
@@ -106,7 +125,7 @@ export default (props) => {
                   backgroundColor: "white",
                   opacity: 0.7,
                   borderRadius: 5,
-                  paddingHorizontal:20,
+                  paddingHorizontal: 20,
                   ...StyleSheet.absoluteFillObject,
                 }}
               />
@@ -116,7 +135,6 @@ export default (props) => {
                 style={{
                   color: "black",
                 }}
-                
               />
               <TextInput
                 autoCapitalize="none"
@@ -130,10 +148,9 @@ export default (props) => {
                 placeholder="Username"
                 value={usernameInput}
                 onChangeText={(text) => setUsernameInput(text)}
-                
               />
             </View>
-            
+
             <Button
               onPress={loginBtnHandler}
               containerStyle={{ marginTop: 40 }}
