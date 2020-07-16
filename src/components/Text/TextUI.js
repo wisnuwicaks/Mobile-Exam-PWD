@@ -23,12 +23,12 @@ export default ({ children, style, accent, bold, size }) => {
       fontSize = 17;
       break;
   }
-
+///sdfs
   return (
     <Text
       style={{
         ...styles.text,
-        color: accent ? "#F54B64" : "#black",
+        color: accent ? "#F54B64" : "black",
         // fontFamily,
         fontSize: 15,
         textAlignVertical: "center",

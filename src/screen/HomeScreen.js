@@ -59,7 +59,6 @@ export default ({ navigation }) => {
       <View
         style={{
           flexDirection: "row",
-
           backgroundColor: "orange",
           marginTop: 20,
           height: 50,
@@ -69,8 +68,10 @@ export default ({ navigation }) => {
           <Icon
             type="AntDesign"
             name="user"
+
             style={{
               color: "white",
+              left:20
             }}
           />
         </View>
@@ -78,7 +79,7 @@ export default ({ navigation }) => {
           style={{
             justifyContent: "flex-end",
             alignSelf: "center",
-            marginStart: 300,
+            marginStart: 250,
           }}
         >
           <Text style={{ color: "white" }}>

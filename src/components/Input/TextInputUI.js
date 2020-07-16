@@ -7,21 +7,25 @@ const styles = StyleSheet.create({
     paddingVertical: 11,
     paddingHorizontal: 20,
     justifyContent: "center",
+    
   },
   bg: {
     backgroundColor: "white",
     opacity: 0.8,
     ...StyleSheet.absoluteFillObject,
     borderRadius:5,
+    
   },
   textInput: {
     // fontFamily: "AvenirNextLTPro-Regular",
     fontSize: 17,
     lineHeight: 19,
     color: "white",
+    borderBottomColor:"black",
+    borderBottomWidth:5
   },
 });
-
+////
 export default ({
   onChangeText,
   containerStyle,

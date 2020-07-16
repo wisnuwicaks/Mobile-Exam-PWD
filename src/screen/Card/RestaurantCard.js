@@ -57,6 +57,8 @@ export default ({ navigation, data }) => {
           }}
           width={width / 2}
         />
+      </TouchableOpacity>
+
       <View style={{ paddingHorizontal: 2 }}>
         <View
           style={{
@@ -98,7 +100,6 @@ export default ({ navigation, data }) => {
           </View>
         </View>
       </View>
-      </TouchableOpacity>
 
     </View>
     // </View>

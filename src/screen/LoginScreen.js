@@ -123,9 +123,11 @@ export default (props) => {
               <View
                 style={{
                   backgroundColor: "white",
-                  opacity: 0.7,
+                  opacity: 0.5,
                   borderRadius: 5,
                   paddingHorizontal: 20,
+                  borderBottomColor:"black",
+                  borderBottomWidth:2,
                   ...StyleSheet.absoluteFillObject,
                 }}
               />
@@ -144,6 +146,7 @@ export default (props) => {
                   fontSize: 17,
                   color: "black",
                   lineHeight: 19,
+                  
                 }}
                 placeholder="Username"
                 value={usernameInput}
