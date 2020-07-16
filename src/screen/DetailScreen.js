@@ -71,7 +71,7 @@ export default (props) => {
           </TextUI>
           <TextUI size="sm" style={{ height: null }}>
             Open {"       "}:{"  "}
-            {restaurantDetail.openTime + " to " + restaurantDetail.closeTime}
+            {restaurantDetail.openTime +" AM"+ " to " + restaurantDetail.closeTime+ " PM"}
           </TextUI>
 
           <TextUI size="sm" style={{ height: null }}>
